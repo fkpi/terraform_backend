@@ -15,7 +15,7 @@ resource "aws_iam_role" "codebuild_pr_role" {
 POLICY
 }
 
-resource "aws_iam_role_policy" "example" {
+resource "aws_iam_role_policy" "codebuild_pr_role_policy" {
   role = aws_iam_role.codebuild_pr_role.name
 
   policy = <<POLICY
