@@ -22,6 +22,8 @@ resource "aws_codebuild_project" "codebuild_pull_request" {
       resource = aws_codebuild_source_credential.codebuild_github_credential.arn
     }
 
+    buildspec = var.buildspec_filename_path
+
 
     git_submodules_config {
       fetch_submodules = true
