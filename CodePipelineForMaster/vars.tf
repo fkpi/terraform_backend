@@ -1,6 +1,6 @@
 # Provider variables
 variable "region" {
-  type = string
+  type        = string
   description = "Region in which the infrastructure will be build"
 }
 
@@ -25,12 +25,13 @@ variable "codebuild_master_project_name" {
 
 # GitHub Variables
 variable "github_repo" {
-  type = string
+  type        = string
   description = "Name of the repository in which files are kept"
 }
 
 variable "github_owner" {
-  type = string
+  type        = string
+  description = "Name of GitHub user which owns the repository"
 }
 
 variable "github_branch" {
