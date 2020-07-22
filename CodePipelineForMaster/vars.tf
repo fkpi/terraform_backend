@@ -35,7 +35,8 @@ variable "github_owner" {
 }
 
 variable "github_branch" {
-  type = string
+  type       = string
+  desription = "Branch which will be build when changes in it occur"
 }
 
 variable "github_token" {
