@@ -26,6 +26,7 @@ variable "codebuild_master_project_name" {
 # GitHub Variables
 variable "github_repo" {
   type = string
+  description = "Name of the repository in which files are kept"
 }
 
 variable "github_owner" {
