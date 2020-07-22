@@ -40,7 +40,8 @@ variable "github_branch" {
 }
 
 variable "github_token" {
-  type = string
+  type        = string
+  description = "Personal Access Token for target repository. Must be created on account with admin rights for the target repo."
 }
 
 variable "github_webhook_secret" {
