@@ -5,3 +5,11 @@
    Take note that Terraform does    not allow variables in backend block - this needs to be hardcoded. 
 4. Run terraform apply in the directory containing both main.tf and backend.tf file. For this to work properly, the infrastructure present in /backend directory has to be build.
 5. You should now have working CI/CD pipeline for testing changes made on feature branches (when Pull Request to master branch is created) and for applying changes made on master    branch. State of this infrastructure is stored remotely on S3 bucket, therefore it can now be managed bu multiple people.
+
+Notes:
+   When using different buildspec files for testing purposes, it would be necessary to run terraform commands in separate workspace, as not to mess with existing infrastructure. this can be achieved by following commands:<br>
+      After terraform init:<br>   'terraform workspace new test'<br>
+      After terraform destroy:<br>   'terraform workspace select default'<br>
+                               'terraform workspace delete test'
+                               
+Using this will ensure that the infrastructure that is being tested will be created in separation to already existing, proper infrastructure
