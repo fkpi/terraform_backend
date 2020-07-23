@@ -1,5 +1,5 @@
 resource "aws_iam_role" "codepipeline_role" {
-  name = var.codepipeline_role_name
+  name               = var.codepipeline_role_name
   assume_role_policy = <<POLICY
 {
   "Version": "2012-10-17",
@@ -88,7 +88,8 @@ resource "aws_iam_role_policy" "codebuild_master_role_policy" {
       "Effect": "Allow",
       "Action": [
         "ec2:*",
-        "eks:*"
+        "eks:*",
+        "dynamodb:*"
       ],
       "Resource": "*"
     },
