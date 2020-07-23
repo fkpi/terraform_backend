@@ -37,7 +37,8 @@ resource "aws_iam_role_policy" "codebuild_pr_role_policy" {
       "Effect": "Allow",
       "Action": [
         "ec2:*",
-        "eks:*"
+        "eks:*",
+        "dynamodb:*"
       ],
       "Resource": "*"
     },

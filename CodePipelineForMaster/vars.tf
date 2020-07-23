@@ -23,6 +23,10 @@ variable "codebuild_master_project_name" {
   type = string
 }
 
+variable "buildspec_name" {
+  type = string
+}
+
 # GitHub Variables
 variable "github_repo" {
   type        = string
@@ -35,8 +39,8 @@ variable "github_owner" {
 }
 
 variable "github_branch" {
-  type       = string
-  desription = "Branch which will be build when changes in it occur"
+  type        = string
+  description = "Branch which will be build when changes in it occur"
 }
 
 variable "github_token" {
